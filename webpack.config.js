@@ -3,16 +3,20 @@ const path = require('path');
 module.exports = {
   entry: './src/index.js',
   devtool: 'inline-source-map',
-  /*
-  externals: {
-    lodash: {
-      commonjs: 'lodash',
-      commonjs2: 'lodash',
-      amd: 'lodash',
-      root: '_'
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['babel-preset-latest']
+          }
+        }
     }
+    ]
   },
-  */
   output: {
     filename: 'postal.js',
     path: path.resolve(__dirname, 'dist'),
@@ -21,6 +25,7 @@ module.exports = {
       amd: 'postal',
       commonjs: 'postal'
     },
+
     libraryTarget: 'umd',
     libraryExport: 'default'
   }
