@@ -1,0 +1,22 @@
+{
+  "name": "omniauth-js",
+  "version": "1.0.0",
+  "description": "Library to manage omniauth flows via a browser popup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js",
+    "watch": "webpack --watch --config webpack.config.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "postal": "1.0.8",
+    "postal.federation": "^0.5.3",
+    "postal.xframe": "^0.5.0"
+  }
+}
