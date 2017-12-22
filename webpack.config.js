@@ -1,4 +1,5 @@
 const path = require('path');
+const MinifyPlugin = require('babel-minify-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -7,7 +8,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /(node_modules)/,
+        //exclude: /(node_modules)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -28,5 +29,8 @@ module.exports = {
 
     libraryTarget: 'umd',
     libraryExport: 'default'
-  }
+  },
+  plugins: [
+    //new MinifyPlugin({})
+  ]
 };
