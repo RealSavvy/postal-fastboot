@@ -1,6 +1,6 @@
 {
   "name": "postal-fastboot",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "A specialized build of postal.js that will work with Ember Fastboot",
   "main": "dist/postal.js",
   "scripts": {

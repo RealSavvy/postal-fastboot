@@ -80,7 +80,11 @@ if(typeof window !== 'undefined') {
       var context;
       if (this.shouldProcess()) {
         context = _envIsWorker ? null : this.target;
-        args = [postal.fedx.transports[XFRAME].wrapForTransport(packingSlip)];
+        var clonableSlip = Object.assign({}, packingSlip);
+        if(clonableSlip.envelope) {
+          delete clonableSlip.envelope.reply
+        }
+        args = [postal.fedx.transports[XFRAME].wrapForTransport(clonableSlip)];
         if (!this.options.isWorker && !_envIsWorker) {
           args.push(this.options.origin);
         }
