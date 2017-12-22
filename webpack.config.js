@@ -18,7 +18,7 @@ module.exports = {
     },
     {
       test: /postal\.xframe\.js$/,
-      use: "imports-loader?this=>self||global||window"
+      use: "imports-loader?this=>global||window"
     }
     ]
   },
