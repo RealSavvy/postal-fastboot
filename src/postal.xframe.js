@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import postal from 'postal';
+var _ = require('lodash');
+var postal = require('postal');
 
 if(typeof window !== 'undefined') {
 
@@ -268,5 +268,5 @@ if(typeof window !== 'undefined') {
   };
   plugin.addEventListener(this, "message", listener, false);
 }
+module.exports = postal;
 
-export default postal;

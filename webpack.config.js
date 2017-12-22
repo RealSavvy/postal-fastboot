@@ -15,6 +15,10 @@ module.exports = {
             presets: ['babel-preset-latest']
           }
         }
+    },
+    {
+      test: /postal\.xframe\.js$/,
+      use: "imports-loader?this=>window"
     }
     ]
   },
